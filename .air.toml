@@ -1,0 +1,20 @@
+# Config file for air
+[build]
+# Command to build the binary from the correct Go file
+cmd = "go build -o ./tmp/main ./hello/main.go"
+# Output location for the binary
+bin = "./tmp/main"
+# Path to the full binary file
+full_bin = "tmp/main"
+
+# Watch settings
+[watch]
+# Include Go files and any other relevant file types
+include_ext = ["go", "tpl", "tmpl", "html"]
+# Exclude the `tmp` directory and any others you don't want to watch
+exclude_dir = ["tmp", "vendor"]
+
+# Logging options
+[log]
+# Colorful log output
+color = "true"

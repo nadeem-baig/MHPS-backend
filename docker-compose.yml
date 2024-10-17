@@ -1,0 +1,16 @@
+services:
+  go-service:
+    build: .
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+      - /app/tmp  # Ensure the tmp directory is writable inside the container
+    ports:
+      - "8080:8080"  # Map the host port 8080 to the container port 8080
+    environment:
+      - AIR_ENV=dev
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
