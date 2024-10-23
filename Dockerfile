@@ -18,7 +18,7 @@ RUN go mod download
 COPY . .
 
 # Step 7: Expose the application port
-EXPOSE 8080
+EXPOSE 3000
 
 # Step 8: Command to run Air for live reloading
 CMD ["air"]
